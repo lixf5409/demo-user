@@ -17,8 +17,8 @@ import java.util.List;
 @Repository("userMapper")
 public interface UserMapper {
 
-    @Select("SELECT id,name,user_code userCode FROM user ")
+    @Select("SELECT * FROM user ")
     List<User> findAll();
-    @Select("SELECT id,name,user_code userCode FROM user where id=#{id}")
+    @Select("SELECT * FROM user where id=#{id}")
     User getUser(@Param("id") Integer id);
 }

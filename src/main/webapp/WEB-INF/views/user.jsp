@@ -10,8 +10,8 @@
     </tr>
     <c:forEach items="${users}" var="item" varStatus="st">
         <tr>
+            <td>${item.code}</td>
             <td>${item.name}</td>
-            <td>${item.userCode}</td>
         </tr>
     </c:forEach>
 </table>

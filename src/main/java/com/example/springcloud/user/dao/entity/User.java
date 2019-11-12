@@ -6,7 +6,7 @@ package com.example.springcloud.user.dao.entity;
 public class User {
     private String id;
     private String name;
-    private String userCode;
+    private String code;
 
     public String getId() {
         return id;
@@ -24,20 +24,19 @@ public class User {
         this.name = name;
     }
 
-    public String getUserCode() {
-        return userCode;
+    public String getCode() {
+        return code;
     }
 
-    public void setUserCode(String userCode) {
-        this.userCode = userCode;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", userCode='" + userCode + '\'' +
+                "name='" + name + '\'' +
+                ", code='" + code + '\'' +
                 '}';
     }
 }
