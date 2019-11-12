@@ -1,9 +1,12 @@
 package com.example.springcloud.user.controller;
 
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.example.springcloud.user.dao.entity.User;
 import com.example.springcloud.user.dao.mapper.UserMapper;
 import com.example.springcloud.user.service.IUserService;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,6 +34,6 @@ public class UserController {
     @ResponseBody
     public String listStudent(Integer id) {
         User user = userService.getUser(id);
-        return user.toString();
+        return JSON.toJSONString(user);
     }
 }
