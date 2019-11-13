@@ -25,14 +25,14 @@ public class UserController {
     IUserService userService;
 
     @RequestMapping("/listUser")
-    public String listStudent(Model model) {
+    public String listUser(Model model) {
         List<User> users = userService.findAll();
         model.addAttribute("users", users);
         return "user";
     }
     @RequestMapping("/getUser")
     @ResponseBody
-    public String listStudent(Integer userId) {
+    public String getUser(Integer userId) {
         User user = userService.getUser(userId);
         return JSON.toJSONString(user);
     }
