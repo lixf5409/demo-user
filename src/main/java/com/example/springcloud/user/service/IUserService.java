@@ -11,5 +11,5 @@ import java.util.List;
  */
 public interface IUserService {
     List<User> findAll();
-    User getUser(@Param("id") Integer id);
+    User getUser(@Param("userId") Integer userId);
 }

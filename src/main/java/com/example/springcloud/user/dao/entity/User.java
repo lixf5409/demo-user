@@ -4,39 +4,40 @@ package com.example.springcloud.user.dao.entity;
  * Created by lixiaofeng on 2019/11/12.
  */
 public class User {
-    private String id;
-    private String name;
-    private String code;
+    private String userId;
+    private String userName;
+    private String userCode;
 
-    public String getId() {
-        return id;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getCode() {
-        return code;
+    public String getUserCode() {
+        return userCode;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setUserCode(String userCode) {
+        this.userCode = userCode;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
-                ", code='" + code + '\'' +
+                "userId='" + userId + '\'' +
+                ", userName='" + userName + '\'' +
+                ", userCode='" + userCode + '\'' +
                 '}';
     }
 }

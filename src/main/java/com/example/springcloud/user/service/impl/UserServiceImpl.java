@@ -21,7 +21,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public User getUser(Integer id) {
-        return userMapper.getUser(id);
+    public User getUser(Integer userId) {
+        return userMapper.getUser(userId);
     }
 }

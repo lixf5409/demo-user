@@ -17,8 +17,8 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
 
-//@RestController
 @Controller
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -32,8 +32,8 @@ public class UserController {
     }
     @RequestMapping("/getUser")
     @ResponseBody
-    public String listStudent(Integer id) {
-        User user = userService.getUser(id);
+    public String listStudent(Integer userId) {
+        User user = userService.getUser(userId);
         return JSON.toJSONString(user);
     }
 }
