@@ -3,11 +3,11 @@
 <mapper namespace="com.example.springcloud.user.dao.mapper.UserMapper">
 
     <select id="findAll"  resultType="User">
-        select * from user
+        select * from org_user
     </select>
 
     <select id="getUser" resultType="User">
-        select * from user
+        select * from org_user
         where user_id = #{userId}
     </select>
 </mapper>
