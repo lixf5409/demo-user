@@ -4,4 +4,11 @@ spring:
     username: root
     password: lixf
     driver-class-name: com.mysql.jdbc.Driver
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: beans,metrics,health
+  endpoint:
+    health:
+      show-details: always
