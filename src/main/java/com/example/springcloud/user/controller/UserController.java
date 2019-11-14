@@ -27,7 +27,7 @@ public class UserController {
     IUserService userService;
 
     @GetMapping("/listUser")
-    public  List<User> listUser(Model model) {
+    public  List<User> listUser() {
         List<User> users = userService.findAll();
         return users;
     }
