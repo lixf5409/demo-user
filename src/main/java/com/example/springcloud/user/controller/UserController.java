@@ -10,30 +10,30 @@ import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/user")
 public class UserController {
 
     @Autowired
     IUserService userService;
 
-    @RequestMapping("/listUser")
-    public String listUser(Model model) {
+    @GetMapping("/listUser")
+    public  List<User> listUser(Model model) {
         List<User> users = userService.findAll();
-        model.addAttribute("users", users);
-        return "user";
+        return users;
     }
-    @RequestMapping("/getUser")
-    @ResponseBody
-    public String getUser(Integer userId) {
+    @GetMapping("/getUser")
+    public User getUser(Integer userId) {
         User user = userService.getUser(userId);
-        return JSON.toJSONString(user);
+        return user;
     }
 }
